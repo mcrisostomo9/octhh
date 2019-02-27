@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: About our values
+image: /img/ewrwer.jpg
 ---
 ### Shade-grown coffee
 

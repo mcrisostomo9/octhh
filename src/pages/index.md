@@ -5,7 +5,7 @@ heroSection:
   description: |-
     dfahidafhidasfilfdnn
     fdjksfadsjkfd
-  heroImage: /img/gallery11.jpg
+  heroImage: /img/chemex.jpg
 nextEventSection:
   date: Mar 8th 19
   rsvpLink: go here.com
@@ -32,7 +32,7 @@ locationSection:
   date: Mar 7th 19
   eventTimeRange: 7-9
   map: '{"type":"Point","coordinates":[-104.1682434,38.9102702]}'
-  parkingBlurb: plz park here
+  parkingBlurb: '## **plz park here**'
   rsvpLink: fdas
   venueName: eureka
 title: Yo wattup

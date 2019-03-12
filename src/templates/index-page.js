@@ -164,7 +164,6 @@ export const pageQuery = graphql`
       frontmatter {
         heroSection {
           title
-            
         }
         title
         image {

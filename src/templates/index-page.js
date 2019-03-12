@@ -7,6 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
+  heroSection,
   image,
   title,
   heading,
@@ -14,19 +15,20 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  main
+  main,
 }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
+      // style={{
+      //   backgroundImage: `url(${
+      //     !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+      //   })`,
+      //   backgroundPosition: `top left`,
+      //   backgroundAttachment: `fixed`
+      // }}
     >
+      {heroSection.title}
       <div
         style={{
           display: "flex",
@@ -34,7 +36,7 @@ export const IndexPageTemplate = ({
           lineHeight: "1",
           justifyContent: "space-around",
           alignItems: "left",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <h1
@@ -45,7 +47,7 @@ export const IndexPageTemplate = ({
             backgroundColor: "rgb(255, 68, 0)",
             color: "white",
             lineHeight: "1",
-            padding: "0.25em"
+            padding: "0.25em",
           }}
         >
           {title}
@@ -58,7 +60,7 @@ export const IndexPageTemplate = ({
             backgroundColor: "rgb(255, 68, 0)",
             color: "white",
             lineHeight: "1",
-            padding: "0.25em"
+            padding: "0.25em",
           }}
         >
           {subheading}
@@ -123,8 +125,8 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+    blurbs: PropTypes.array,
+  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -133,6 +135,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
+        heroSection={frontmatter.heroSection}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -148,9 +151,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default IndexPage;
@@ -159,6 +162,10 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        heroSection {
+          title
+            
+        }
         title
         image {
           childImageSharp {

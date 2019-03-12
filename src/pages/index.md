@@ -1,40 +1,54 @@
 ---
 templateKey: index-page
 heroSection:
-  title: the hero section
-  description: |-
-    dfahidafhidasfilfdnn
-    fdjksfadsjkfd
+  title: OC Tech Happy Hour
+  description: >-
+    Entrepreneurship is hard.
+
+    OC Tech Happy Hour is not. It’s the best place for investors, entrepreneurs,
+    engineers, the technologically inclined and the creatively inspired.
   heroImage: /img/chemex.jpg
 nextEventSection:
-  date: Mar 8th 19
-  rsvpLink: go here.com
-  title: next event
+  date: Mar 21st 19
+  locationAddress: '1621 Alton Parkway, Irvine'
+  locationName: Eureka Building
+  rsvpLink: octhh.org
+  title: 'Fireside Chat: Women in Tech + Networking!'
 agendaSection:
   active: true
   agendaItems:
-    - time: '10:24 PM'
-      title: first speaker
-    - time: '10:24 PM'
-      title: second speaker
+    - time: '2:47 PM'
+      title: Networking
+    - time: '2:48 PM'
+      title: Panel Discussion
+    - time: '2:48 PM'
+      title: Networking + Closing
 panelistSection:
   active: true
   panelistItems:
-    - biography: dfadfsafdfad
-      image: /img/544654.jpg
-      name: joanne guin
-      position: marketing
-    - biography: adfas
-      image: /img/apple-touch-icon.png
-      name: tug lana
-      position: lana
+    - biography: |-
+        She founded jobot
+
+        mr roboto
+      image: /img/blog-index.jpg
+      name: Heidi Golledge
+      position: Founder of Jobot
+    - biography: |-
+        she founded peoplespace
+
+
+
+        yes she did
+      image: /img/chemex.jpg
+      name: Melinda Kim
+      position: 'Co-Founder, Director of PeopleSpace'
 locationSection:
-  date: Mar 7th 19
-  eventTimeRange: 7-9
-  map: '{"type":"Point","coordinates":[-104.1682434,38.9102702]}'
+  date: Mar 19th 19
+  eventTimeRange: '7:00pm - 9pm'
+  map: '{"type":"Point","coordinates":[-104.1725361,38.9108405]}'
   parkingBlurb: '## **plz park here**'
-  rsvpLink: fdas
-  venueName: eureka
+  rsvpLink: octhh.org
+  venueName: Eureka Building
 title: Yo wattup
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience

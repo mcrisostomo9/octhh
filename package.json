@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-netlify-cms",
   "description": "OC Tech Happy Hour Website",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Mark Crisostomo",
   "dependencies": {
     "bulma": "^0.7.0",

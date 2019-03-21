@@ -12,16 +12,16 @@ nextEventSection:
   date: Mar 21st 19
   locationAddress: '1621 Alton Parkway, Irvine'
   locationName: Eureka Building
-  rsvpLink: octhh.org
+  rsvpLink: octhh.orgs
   title: 'Fireside Chat: Women in Tech + Networking!'
 agendaSection:
-  active: true
+  active: false
   agendaItems:
-    - time: '2:47 PM'
+    - timeRange: hh
       title: Networking
-    - time: '2:48 PM'
+    - timeRange: hhjjh
       title: Panel Discussion
-    - time: '2:48 PM'
+    - timeRange: hgkghgh
       title: Networking + Closing
 panelistSection:
   active: true

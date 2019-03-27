@@ -6,11 +6,13 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection/HeroSection";
 import NextEventSection from "../sections/home/NextEventSection";
 import AgendaSection from "../sections/home/AgendaSection";
+import PanelistSection from "../sections/home/panelistSection";
 
 export const IndexPageTemplate = ({
   heroSection,
   nextEventSection,
   agendaSection,
+  panelistSection,
   // image,
   // title,
   // heading,
@@ -24,6 +26,7 @@ export const IndexPageTemplate = ({
     <HeroSection data={heroSection} />
     <NextEventSection data={nextEventSection} />
     {agendaSection.active && <AgendaSection data={agendaSection} />}
+    {panelistSection.active && <PanelistSection data={panelistSection} />}
   </>
 );
 
@@ -48,6 +51,7 @@ const IndexPage = ({ data }) => {
         heroSection={frontmatter.heroSection}
         nextEventSection={frontmatter.nextEventSection}
         agendaSection={frontmatter.agendaSection}
+        panelistSection={frontmatter.panelistSection}
         // image={frontmatter.image}
         // title={frontmatter.title}
         // heading={frontmatter.heading}

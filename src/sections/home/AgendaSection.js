@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
-const Container = styled.div`
+const StyledSectionContainer = styled(SectionContainer)`
   background-color: #f2f2f2;
 `;
 const AgendaSection = ({ data: { agendaItems } }) => {
-  console.log(agendaItems);
   return (
-    <Container>
+    <StyledSectionContainer>
+      <SectionTitle title="Agenda" />
       {agendaItems.map(i => (
         <div>
           <div>{i.title}</div>
           <div>{i.timeRange}</div>
         </div>
       ))}
-    </Container>
+    </StyledSectionContainer>
   );
 };
 

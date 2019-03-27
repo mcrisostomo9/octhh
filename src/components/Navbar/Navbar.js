@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import logo from "../../img/logo.svg";
+import logo from "../../img/logo.png";
 import Button from "../Button/Button";
 
 const Logo = styled.img`
-  width: 100px;
+  //width: 50px;
 `;
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ const Navbar = class extends React.Component {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(
       document.querySelectorAll(".navbar-burger"),
-      0,
+      0
     );
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
@@ -43,13 +43,18 @@ const Navbar = class extends React.Component {
         <Container className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <Logo src={logo} alt="OC Tech Happy Hour"/>
+              <Logo
+                src={logo}
+                alt="OC Tech Happy Hour"
+                width="50"
+                height="auto"
+              />
             </Link>
             {/* Hamburger menu */}
             <div className="navbar-burger burger" data-target="navMenu">
-              <span/>
-              <span/>
-              <span/>
+              <span />
+              <span />
+              <span />
             </div>
           </div>
 

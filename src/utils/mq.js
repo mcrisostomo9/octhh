@@ -1,5 +1,5 @@
 const mq = {
-  a400: `@media(min-width: 400px)`,
+  a375: `@media(min-width: 375px)`,
   a500: `@media(min-width: 500px)`,
   a768: `@media(min-width: 768px)`,
   a992: `@media(min-width: 992px)`,

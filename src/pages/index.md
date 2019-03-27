@@ -7,7 +7,7 @@ heroSection:
 
     OC Tech Happy Hour is not. It’s the best place for investors, entrepreneurs,
     engineers, the technologically inclined and the creatively inspired.
-  heroImage: /img/chemex.jpg
+  heroImage: /img/octhh_web_home.png
 nextEventSection:
   date: Mar 21st 19
   locationAddress: '1621 Alton Parkway, Irvine'

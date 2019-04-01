@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: test event
+title: January 2019
 date: 2019-02-27T22:19:24.854Z
-description: whats in this event
+description: January Event at Hotel Irvine
 ---
-yo
+Hello

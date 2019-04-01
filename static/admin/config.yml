@@ -19,13 +19,13 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pastEvents"
-    label: "Past Events"
+  - name: "events"
+    label: "Events"
     folder: "src/pages/events"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "past-events-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}

@@ -12,7 +12,7 @@ const Date = styled(Base)``;
 const Name = styled(Base)``;
 const Address = styled(Base)``;
 
-const LocationSection = ({
+const PastEventsSection = ({
   data: { date, eventTimeRange, venueName, map, parkingBlurb },
 }) => {
   return (
@@ -30,4 +30,4 @@ const LocationSection = ({
   );
 };
 
-export default LocationSection;
+export default PastEventsSection;

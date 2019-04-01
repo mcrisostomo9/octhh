@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/navbar/navbar";
 
 import "./all.sass";
 import "./layout.css";

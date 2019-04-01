@@ -17,11 +17,11 @@ nextEventSection:
 agendaSection:
   active: true
   agendaItems:
-    - timeRange: hh
+    - timeRange: '6:00-6:30'
       title: Networking
-    - timeRange: hhjjh
+    - timeRange: '6:30-7:30'
       title: Panel Discussion
-    - timeRange: hgkghgh
+    - timeRange: '7:30-8:00'
       title: Networking + Closing
 panelistSection:
   active: true

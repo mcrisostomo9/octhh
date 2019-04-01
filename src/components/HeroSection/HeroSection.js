@@ -27,6 +27,7 @@ const TextContainer = styled.div`
   justify-content: center;
   text-align: center;
   padding: 0 32px;
+  width: 100%;
 
   * {
     color: #fff;

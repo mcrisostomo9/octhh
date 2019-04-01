@@ -7,12 +7,14 @@ import HeroSection from "../components/HeroSection/HeroSection";
 import NextEventSection from "../sections/home/NextEventSection";
 import AgendaSection from "../sections/home/AgendaSection";
 import PanelistSection from "../sections/home/panelistSection";
+import LocationSection from "../sections/home/LocationSection";
 
 export const IndexPageTemplate = ({
   heroSection,
   nextEventSection,
   agendaSection,
   panelistSection,
+  locationSection,
   // image,
   // title,
   // heading,
@@ -27,6 +29,7 @@ export const IndexPageTemplate = ({
     <NextEventSection data={nextEventSection} />
     {agendaSection.active && <AgendaSection data={agendaSection} />}
     {panelistSection.active && <PanelistSection data={panelistSection} />}
+    <LocationSection data={locationSection} />
   </>
 );
 
@@ -52,6 +55,7 @@ const IndexPage = ({ data }) => {
         nextEventSection={frontmatter.nextEventSection}
         agendaSection={frontmatter.agendaSection}
         panelistSection={frontmatter.panelistSection}
+        locationSection={frontmatter.locationSection}
         // image={frontmatter.image}
         // title={frontmatter.title}
         // heading={frontmatter.heading}
@@ -92,6 +96,8 @@ export const pageQuery = graphql`
         nextEventSection {
           title
           date
+          locationName
+          locationAddress
           rsvpLink
         }
         agendaSection {
@@ -116,13 +122,12 @@ export const pageQuery = graphql`
             }
           }
         }
-
         locationSection {
           date
           eventTimeRange
+          rsvpLink
           venueName
           map
-          parkingBlurb
           parkingBlurb
         }
 

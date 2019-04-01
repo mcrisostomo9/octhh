@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 20px 40px;
+  padding: 30px 40px;
   text-align: center;
 `;
 

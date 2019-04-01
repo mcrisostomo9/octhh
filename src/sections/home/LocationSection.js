@@ -20,21 +20,22 @@ const Date = styled(Base)``;
 const Name = styled(Base)``;
 const Address = styled(Base)``;
 
-const NextEventSection = ({
-  data: { title, date, locationName, locationAddress, rsvpLink },
+const LocationSection = ({
+  data: { date, eventTimeRange, venueName, map, parkingBlurb },
 }) => {
   return (
     <StyledSectionContainer>
-      <SectionTitle title="Next Event" />
-      <StyledH3>{title}</StyledH3>
+      <SectionTitle title="Time + Place" />
       <Date>{date}</Date>
-      <Name>{locationName}</Name>
-      <Address>{locationAddress}</Address>
-      <a href={`https://${rsvpLink}`} target="_blank" rel="noopener noreferrer">
-        <Button text="RSVP" />
-      </a>
+      {/*<a href={`https://${rsvpLink}`} target="_blank" rel="noopener noreferrer">*/}
+      <Button text="RSVP" />
+      {/*</a>*/}
+      <Name>{venueName}</Name>
+
+      <Address>hh</Address>
+      <div>{parkingBlurb}</div>
     </StyledSectionContainer>
   );
 };
 
-export default NextEventSection;
+export default LocationSection;

@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import Layout from "../components/Layout";
-import HeroSection from "../components/HeroSection/HeroSection";
-import NextEventSection from "../sections/home/NextEventSection";
-import AgendaSection from "../sections/home/AgendaSection";
+import Layout from "../components/layout";
+import HeroSection from "../components/HeroSection/heroSection";
+import NextEventSection from "../sections/home/nextEventSection";
+import AgendaSection from "../sections/home/agendaSection";
 import PanelistSection from "../sections/home/panelistSection";
-import LocationSection from "../sections/home/LocationSection";
+import LocationSection from "../sections/home/locationSection";
 
 export const IndexPageTemplate = ({
   heroSection,

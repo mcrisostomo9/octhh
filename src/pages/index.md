@@ -26,22 +26,38 @@ agendaSection:
 panelistSection:
   active: true
   panelistItems:
-    - biography: |-
-        She founded jobot
-
-        mr roboto
-      image: /img/blog-index.jpg
-      name: Heidi Golledge
-      position: Founder of Jobot
-    - biography: |-
-        she founded peoplespace
+    - biography: >-
+        He founded woof
 
 
+        Lorem ipsum dolor amet hell of woke poutine snackwave food truck.
+        Vexillologist mumblecore hell of kombucha, 8-bit put a bird on it air
+        plant pitchfork letterpress health goth humblebrag cliche gentrify
+        bicycle rights. XOXO bicycle rights marfa, listicle street art
+        chicharrones lyft palo santo wolf celiac chia cray shabby chic twee
+        fashion axe. Occupy glossier farm-to-table portland, next level
+        kickstarter master cleanse succulents 8-bit hexagon vinyl church-key
+        bicycle rights vape sriracha. Hella viral cold-pressed, +1 vegan shaman
+        humblebrag food truck synth crucifix iceland kombucha kogi thundercats.
+      image: /img/4gm2hk19lsc21.jpg
+      name: Good Boy
+      position: Founder of Woof
+    - biography: >-
+        He founded this houzz
 
-        yes she did
-      image: /img/chemex.jpg
-      name: Melinda Kim
-      position: 'Co-Founder, Director of PeopleSpace'
+
+        Lorem ipsum dolor amet hell of woke poutine snackwave food truck.
+        Vexillologist mumblecore hell of kombucha, 8-bit put a bird on it air
+        plant pitchfork letterpress health goth humblebrag cliche gentrify
+        bicycle rights. XOXO bicycle rights marfa, listicle street art
+        chicharrones lyft palo santo wolf celiac chia cray shabby chic twee
+        fashion axe. Occupy glossier farm-to-table portland, next level
+        kickstarter master cleanse succulents 8-bit hexagon vinyl church-key
+        bicycle rights vape sriracha. Hella viral cold-pressed, +1 vegan shaman
+        humblebrag food truck synth crucifix iceland kombucha kogi thundercats.
+      image: /img/img_20190225_110811.jpg
+      name: Bodrick
+      position: 'Co-Founder, Director of My House'
 locationSection:
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import HeroSection from "../components/HeroSection/heroSection";
+import HeroSection from "../components/heroSection/heroSection";
 import NextEventSection from "../sections/home/nextEventSection";
 import AgendaSection from "../sections/home/agendaSection";
 import PanelistSection from "../sections/home/panelistSection";

@@ -62,7 +62,7 @@ locationSection:
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'
   map: '{"type":"Point","coordinates":[-104.1725361,38.9108405]}'
-  parkingBlurb: '## **plz park here**'
+  parkingBlurb: plz park around the corner
   rsvpLink: octhh.org
   venueName: Eureka Building
 title: Yo wattup

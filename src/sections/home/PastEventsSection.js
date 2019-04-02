@@ -36,6 +36,7 @@ const PastEventsSection = () => (
       const events = data.allMarkdownRemark.edges;
       return (
         <SectionContainer>
+          <SectionTitle title="Past Events" />
           {/*<Img*/}
           {/*fluid={data.hero.childImageSharp.fluid}*/}
           {/*style={{ height: "100%" }}*/}

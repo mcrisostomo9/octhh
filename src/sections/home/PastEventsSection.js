@@ -3,6 +3,8 @@ import styled from "styled-components";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Button from "../../components/Button/Button";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const Base = styled.div`
   margin-bottom: 0.5rem;
@@ -12,22 +14,40 @@ const Date = styled(Base)``;
 const Name = styled(Base)``;
 const Address = styled(Base)``;
 
-const PastEventsSection = ({
-  data: { date, eventTimeRange, venueName, map, parkingBlurb },
-}) => {
-  return (
-    <SectionContainer>
-      <SectionTitle title="Time + Place" />
-      <Date>{date}</Date>
-      {/*<a href={`https://${rsvpLink}`} target="_blank" rel="noopener noreferrer">*/}
-      <Button text="RSVP" />
-      {/*</a>*/}
-      <Name>{venueName}</Name>
-
-      <Address>hh</Address>
-      <div>{parkingBlurb}</div>
-    </SectionContainer>
-  );
-};
+const PastEventsSection = () => (
+  <StaticQuery
+    query={graphql`
+      query PastEventsPost {
+        allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                templateKey
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const events = data.allMarkdownRemark.edges;
+      return (
+        <SectionContainer>
+          {/*<Img*/}
+          {/*fluid={data.hero.childImageSharp.fluid}*/}
+          {/*style={{ height: "100%" }}*/}
+          {/*/>*/}
+          {events.map(i => {
+            const { title } = i.node.frontmatter;
+            return <div>{title}</div>;
+          })}
+        </SectionContainer>
+      );
+    }}
+  />
+);
 
 export default PastEventsSection;

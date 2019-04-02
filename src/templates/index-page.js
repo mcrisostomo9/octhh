@@ -7,6 +7,7 @@ import LocationSection from "../sections/home/LocationSection";
 import PanelistSection from "../sections/home/PanelistSection";
 import AgendaSection from "../sections/home/AgendaSection";
 import Layout from "../components/Layout";
+import PastEventsSection from "../sections/home/PastEventsSection";
 
 export const IndexPageTemplate = ({
   heroSection,
@@ -29,6 +30,7 @@ export const IndexPageTemplate = ({
     {agendaSection.active && <AgendaSection data={agendaSection} />}
     {panelistSection.active && <PanelistSection data={panelistSection} />}
     <LocationSection data={locationSection} />
+    <PastEventsSection />
   </>
 );
 

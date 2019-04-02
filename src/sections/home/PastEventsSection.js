@@ -26,6 +26,7 @@ const PastEventsSection = () => (
               frontmatter {
                 title
                 templateKey
+                googleDriveLink
               }
             }
           }
@@ -37,13 +38,19 @@ const PastEventsSection = () => (
       return (
         <SectionContainer>
           <SectionTitle title="Past Events" />
-          {/*<Img*/}
-          {/*fluid={data.hero.childImageSharp.fluid}*/}
-          {/*style={{ height: "100%" }}*/}
-          {/*/>*/}
+
           {events.map(i => {
-            const { title } = i.node.frontmatter;
-            return <div>{title}</div>;
+            const { title, image } = i.node.frontmatter;
+            console.log(i);
+            return (
+              <div>
+                {/*<Img*/}
+                {/*fluid={image.childImageSharp.fluid}*/}
+                {/*style={{ height: "100%" }}*/}
+                {/*/>*/}
+                <div>{title}</div>
+              </div>
+            );
           })}
         </SectionContainer>
       );

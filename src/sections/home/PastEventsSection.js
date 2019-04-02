@@ -68,7 +68,6 @@ const PastEventsSection = () => (
 
           {events.map(i => {
             const { title, image, googleDriveLink } = i.node.frontmatter;
-            console.log(i);
             return (
               <ItemContainer>
                 <Img

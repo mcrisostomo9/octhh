@@ -14,7 +14,7 @@ const BaseButton = props => {
 const Button = styled(BaseButton)`
   cursor: pointer;
   border: none;
-  padding: 12px 17px;
+  padding: 10px 12px;
   width: 100%;
   max-width: 150px;
   ${fluidTypography(320, 1980, 12, 14)};

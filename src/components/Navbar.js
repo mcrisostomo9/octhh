@@ -1,72 +1,71 @@
 import React from "react";
 import { Link } from "gatsby";
+import HamburgerMenu from "react-hamburger-menu";
 import styled from "styled-components";
 import logo from "../img/logo.png";
 import Button from "./Button/Button";
 
 const Logo = styled.img`
-  //width: 50px;
+  width: 50px;
 `;
 
-const Container = styled.div`
+const NavContainer = styled.nav`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+
+  a {
+    line-height: 0;
+  }
 `;
 
-const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener("click", () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("is-active");
-          $target.classList.toggle("is-active");
-        });
-      });
-    }
+  button {
+    margin-right: 10px;
   }
+`;
 
+class Navbar extends React.Component {
+  state = {
+    mobileIsOpen: false,
+  };
+
+  handleMenuClick = () => {
+    this.setState(prevState => ({
+      mobileIsOpen: !prevState.mobileIsOpen,
+    }));
+  };
   render() {
+    const { mobileIsOpen } = this.state;
     return (
-      <nav className="navbar" role="navigation" aria-label="main-navigation">
-        <Container className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <Logo
-                src={logo}
-                alt="OC Tech Happy Hour"
-                width="50"
-                height="auto"
-              />
-            </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-end">
-              <Button className="navbar-item" text="Become a Member" />
-            </div>
-          </div>
-        </Container>
-      </nav>
+      <NavContainer
+        className="navbar"
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <Link to="/">
+          <Logo src={logo} />
+        </Link>
+        <RightContainer>
+          <Button text="Become a member" />
+          <HamburgerMenu
+            isOpen={mobileIsOpen}
+            color="#fff"
+            menuClicked={this.handleMenuClick}
+            width={40}
+            height={26}
+            strokeWidth={3}
+          />
+        </RightContainer>
+      </NavContainer>
     );
   }
-};
+}
 
 export default Navbar;

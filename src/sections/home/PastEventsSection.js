@@ -63,7 +63,7 @@ const PastEventsSection = () => (
           <SectionTitle title="Past Events" />
 
           {events.map(i => {
-            const { title, image, googleDriveLink } = i.node.frontmatter;
+            const { title, image } = i.node.frontmatter;
             return (
               <ItemContainer>
                 <Img

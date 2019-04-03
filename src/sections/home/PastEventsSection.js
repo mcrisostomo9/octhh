@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import Button from "../../components/Button/Button";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import bg from "../../img/pe_bg.png";
 
-const Base = styled.div`
-  margin-bottom: 0.5rem;
+const StyledSectionContainer = styled(SectionContainer)`
+  background: url(${bg});
 `;
 
 const ItemContainer = styled.div`
@@ -29,10 +29,6 @@ const Title = styled.div`
   align-items: center;
   font-weight: bold;
 `;
-
-const Date = styled(Base)``;
-const Name = styled(Base)``;
-const Address = styled(Base)``;
 
 const PastEventsSection = () => (
   <StaticQuery
@@ -63,7 +59,7 @@ const PastEventsSection = () => (
     render={data => {
       const events = data.allMarkdownRemark.edges;
       return (
-        <SectionContainer>
+        <StyledSectionContainer>
           <SectionTitle title="Past Events" />
 
           {events.map(i => {
@@ -78,7 +74,7 @@ const PastEventsSection = () => (
               </ItemContainer>
             );
           })}
-        </SectionContainer>
+        </StyledSectionContainer>
       );
     }}
   />

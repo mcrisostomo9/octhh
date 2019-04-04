@@ -15,14 +15,6 @@ export const IndexPageTemplate = ({
   agendaSection,
   panelistSection,
   locationSection,
-  // image,
-  // title,
-  // heading,
-  // subheading,
-  // mainpitch,
-  // description,
-  // intro,
-  // main,
 }) => (
   <>
     <HeroSection data={heroSection} />

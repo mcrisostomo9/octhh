@@ -4,6 +4,7 @@ import HamburgerMenu from "react-hamburger-menu";
 import styled from "styled-components";
 import logo from "../img/logo.png";
 import Button from "./Button/Button";
+import mq from "../utils/mq";
 
 const Logo = styled.img`
   width: 50px;
@@ -21,13 +22,25 @@ const NavContainer = styled.nav`
   }
 `;
 
-const RightContainer = styled.div`
+const MobileContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 
   button {
     margin-right: 10px;
+  }
+
+  ${mq.a768} {
+    display: none;
+  }
+`;
+
+const DesktopContainer = styled.div`
+  display: none;
+  ${mq.a768} {
+    display: flex;
+    flex-direction: row;
   }
 `;
 
@@ -52,7 +65,7 @@ class Navbar extends React.Component {
         <Link to="/">
           <Logo src={logo} />
         </Link>
-        <RightContainer>
+        <MobileContainer>
           <Button text="Become a member" />
           <HamburgerMenu
             isOpen={mobileIsOpen}
@@ -62,7 +75,11 @@ class Navbar extends React.Component {
             height={26}
             strokeWidth={3}
           />
-        </RightContainer>
+        </MobileContainer>
+        <DesktopContainer>
+          <div>he</div>
+          <div>he</div>
+        </DesktopContainer>
       </NavContainer>
     );
   }

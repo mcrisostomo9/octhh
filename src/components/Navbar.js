@@ -44,6 +44,43 @@ const DesktopContainer = styled.div`
   }
 `;
 
+const MenuContainer = styled.div`
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ visibility: visible;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+ > div{
+  background: rgba(24, 39, 51 , 0.85);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+ }
+ 
+ > div > div{
+ text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+ }
+
+
+  // display: ${props => (props.open ? `flex` : `none`)};
+`;
+
 class Navbar extends React.Component {
   state = {
     mobileIsOpen: false,
@@ -57,30 +94,52 @@ class Navbar extends React.Component {
   render() {
     const { mobileIsOpen } = this.state;
     return (
-      <NavContainer
-        className="navbar"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <Link to="/">
-          <Logo src={logo} />
-        </Link>
-        <MobileContainer>
-          <Button text="Become a member" />
-          <HamburgerMenu
-            isOpen={mobileIsOpen}
-            color="#fff"
-            menuClicked={this.handleMenuClick}
-            width={40}
-            height={26}
-            strokeWidth={3}
-          />
-        </MobileContainer>
-        <DesktopContainer>
-          <div>he</div>
-          <div>he</div>
-        </DesktopContainer>
-      </NavContainer>
+      <>
+        <NavContainer
+          className="navbar"
+          role="navigation"
+          aria-label="main-navigation"
+        >
+          <Link to="/">
+            <Logo src={logo} />
+          </Link>
+          <MobileContainer>
+            <Button text="Become a member" />
+            <HamburgerMenu
+              isOpen={mobileIsOpen}
+              color="#fff"
+              menuClicked={this.handleMenuClick}
+              width={40}
+              height={26}
+              strokeWidth={3}
+            />
+          </MobileContainer>
+          <DesktopContainer>
+            <div>he</div>
+            <div>he</div>
+          </DesktopContainer>
+        </NavContainer>
+        <MenuContainer open={mobileIsOpen}>
+          <div>
+            <div>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/sponsorship">Sponsorship</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </MenuContainer>
+      </>
     );
   }
 }

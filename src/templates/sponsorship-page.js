@@ -42,7 +42,7 @@ SponsorshipPage.propTypes = {
 
 export default SponsorshipPage;
 
-export const pageQuery = graphql`
+export const sponsorshipPageQuery = graphql`
   query SponsorshipPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "sponsorship-page" } }) {
       frontmatter {
@@ -57,6 +57,7 @@ export const pageQuery = graphql`
           title
           description
         }
+      }
     }
   }
 `;

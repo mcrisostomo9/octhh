@@ -22,5 +22,21 @@ boardOfDirectorsSection:
     position: 'Founder, Chairman'
   - name: Dalip Jaggi
     position: President
+  - name: Brian Walsh
+    position: 'Vice President, Partnerships Chair'
+  - name: Kevin Guo
+    position: Treasurer
+  - name: Amrit Jaggi
+    position: Events Chair
+  - name: Mikhail Alfon
+    position: Social Chair
+  - name: Dan
+    position: Fundraising Chair
+  - name: Taylor Decker
+    position: Event Experiences Chair
+  - name: Janna Cowper
+    position: Design Chair
+  - name: Mark Crisostomo
+    position: Web Chair
 ---
 

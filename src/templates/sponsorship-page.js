@@ -6,7 +6,8 @@ import Layout from "../components/Layout";
 
 export const SponsorshipPageTemplate = ({ heroSection }) => (
   <>
-    <HeroSection data={heroSection} />
+    {/*<HeroSection data={heroSection} />*/}
+    <div>hello</div>
   </>
 );
 

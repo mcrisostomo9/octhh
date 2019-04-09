@@ -39,3 +39,12 @@ collections:
           - {label: "Hero Section", name: heroSection, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: "Hero Image", name: heroImage, widget: image}]}
           - {label: "About Section Extended", name: aboutSectionExtended, widget: markdown}
           - {label: "Board of Directors Section", name: boardOfDirectorsSection, widget: list, fields: [{label: "Name", name: name, widget: string}, {label: "Position", name: position, widget: string}]}
+      - file: "src/pages/sponsorship/index.md"
+        label: "Sponsorship"
+        name: "sponsorship"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsorship-page"}
+          - {label: "Hero Section", name: heroSection, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: "Hero Image", name: heroImage, widget: image}]}
+          - {label: "About Section Extended", name: aboutSectionExtended, widget: markdown}
+          - {label: "Board of Directors Section", name: boardOfDirectorsSection, widget: list, fields: [{label: "Name", name: name, widget: string}, {label: "Position", name: position, widget: string}]}
+

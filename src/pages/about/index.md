@@ -17,5 +17,10 @@ aboutSectionExtended: >-
   Our startups have raised 10s of millions of dollars, our speakers have come
   from virtually every industry including Virtual Reality, Blockchain (Bitcoin),
   Nutrition, Information Technology, SaaS, and even Wine Making!
+boardOfDirectorsSection:
+  - name: Hunter Lee Decker
+    position: 'Founder, Chairman'
+  - name: Dalip Jaggi
+    position: President
 ---
 

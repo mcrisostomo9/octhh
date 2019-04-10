@@ -6,12 +6,16 @@ const Title = styled.h2`
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 6px;
-  color: #0080bb;
   margin-bottom: 20px;
+  color: ${props => (props.color ? props.color : `#0080bb`)};
 `;
 
-const SectionTitle = ({ title, className }) => {
-  return <Title className={`${className} title is-4`}>{title}</Title>;
+const SectionTitle = ({ title, className, color }) => {
+  return (
+    <Title className={className} color={color}>
+      {title}
+    </Title>
+  );
 };
 
 export default SectionTitle;

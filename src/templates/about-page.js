@@ -3,10 +3,18 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroSection from "../components/heroSection/heroSection";
+import AboutExtendedSection from "../sections/about/AboutExtendedSection";
+import BoardOfDirectorsSection from "../sections/about/BoardOfDirectorsSection";
 
-export const AboutPageTemplate = ({ heroSection }) => (
+export const AboutPageTemplate = ({
+  heroSection,
+  aboutSectionExtended,
+  boardOfDirectorsSection,
+}) => (
   <>
     <HeroSection data={heroSection} />
+    <AboutExtendedSection text={aboutSectionExtended} />
+    <BoardOfDirectorsSection board={boardOfDirectorsSection} />
   </>
 );
 
@@ -21,7 +29,11 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate heroSection={frontmatter.heroSection} />
+      <AboutPageTemplate
+        heroSection={frontmatter.heroSection}
+        aboutSectionExtended={frontmatter.aboutSectionExtended}
+        boardOfDirectorsSection={frontmatter.boardOfDirectorsSection}
+      />
     </Layout>
   );
 };

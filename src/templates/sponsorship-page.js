@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import HeroSection from "../components/heroSection/heroSection";
+// import HeroSection from "../components/heroSection/heroSection";
 import Layout from "../components/Layout";
 
 export const SponsorshipPageTemplate = ({ heroSection }) => (

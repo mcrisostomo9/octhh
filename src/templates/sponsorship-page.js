@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-// import HeroSection from "../components/heroSection/heroSection";
 import Layout from "../components/Layout";
+import HeroSection from "../components/heroSection/heroSection";
+import SponsorsSection from "../sections/sponsorship/SponsorsSection";
 
-export const SponsorshipPageTemplate = ({ heroSection }) => (
+export const SponsorshipPageTemplate = ({ heroSection, sponsorsSection }) => (
   <>
-    {/*<HeroSection data={heroSection} />*/}
-    <div>hello</div>
+    <HeroSection data={heroSection} />
+    <SponsorsSection sponsors={sponsorsSection} />
   </>
 );
 
@@ -28,7 +29,10 @@ const SponsorshipPage = ({ data }) => {
 
   return (
     <Layout>
-      <SponsorshipPageTemplate heroSection={frontmatter.heroSection} />
+      <SponsorshipPageTemplate
+        heroSection={frontmatter.heroSection}
+        sponsorsSection={frontmatter.sponsorsSection}
+      />
     </Layout>
   );
 };
@@ -57,6 +61,17 @@ export const sponsorshipPageQuery = graphql`
           }
           title
           description
+        }
+        sponsorsSection {
+          sponsor
+          logo {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          website
         }
       }
     }

@@ -1,8 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
+import fluidTypography from "../../utils/fluidTypography";
 
 const Title = styled.h2`
   font-size: 20px;
+  ${fluidTypography(320, 1980, 20, 35)};
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 6px;

@@ -7,7 +7,6 @@ const Text = styled.p`
 `;
 
 const AboutExtendedSection = ({ text }) => {
-  console.log(text);
   return (
     <SectionContainer>
       <Text>{text}</Text>

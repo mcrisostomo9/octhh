@@ -21,6 +21,8 @@ const Container = styled.div`
 const TextContainer = styled.div`
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -28,6 +30,8 @@ const TextContainer = styled.div`
   text-align: center;
   padding: 0 32px;
   width: 100%;
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
 
   * {
     color: #fff;

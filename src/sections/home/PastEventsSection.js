@@ -5,6 +5,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import bg from "../../img/pe_bg.png";
+import mq from "../../utils/mq";
 
 const StyledSectionContainer = styled(SectionContainer)`
   background: url(${bg});
@@ -13,6 +14,12 @@ const StyledSectionContainer = styled(SectionContainer)`
 const ItemContainer = styled.div`
   position: relative;
   margin-bottom: 1rem;
+  flex-basis: 100%;
+
+  ${mq.a768} {
+    flex-basis: 45%;
+    margin-bottom: 3rem;
+  }
 `;
 
 const Title = styled.div`
@@ -28,6 +35,17 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: bold;
+`;
+
+const EventsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${mq.a768} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 `;
 
 const PastEventsSection = () => (
@@ -61,19 +79,20 @@ const PastEventsSection = () => (
       return (
         <StyledSectionContainer>
           <SectionTitle title="Past Events" />
-
-          {events.map(i => {
-            const { title, image } = i.node.frontmatter;
-            return (
-              <ItemContainer>
-                <Img
-                  fluid={image.childImageSharp.fluid}
-                  style={{ height: "100%" }}
-                />
-                <Title>{title}</Title>
-              </ItemContainer>
-            );
-          })}
+          <EventsContainer>
+            {events.map(i => {
+              const { title, image } = i.node.frontmatter;
+              return (
+                <ItemContainer>
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    style={{ height: "100%" }}
+                  />
+                  <Title>{title}</Title>
+                </ItemContainer>
+              );
+            })}
+          </EventsContainer>
         </StyledSectionContainer>
       );
     }}

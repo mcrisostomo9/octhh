@@ -98,6 +98,7 @@ export const pageQuery = graphql`
           agendaItems {
             title
             timeRange
+            agendaDescription
           }
         }
         panelistSection {
@@ -120,6 +121,7 @@ export const pageQuery = graphql`
           eventTimeRange
           rsvpLink
           venueName
+          venueAddress
           map
           parkingBlurb
         }

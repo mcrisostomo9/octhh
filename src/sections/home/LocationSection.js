@@ -3,28 +3,32 @@ import styled from "styled-components";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Button from "../../components/Button/Button";
+import fluidTypography from "../../utils/fluidTypography";
 
 const Base = styled.div`
   margin-bottom: 0.5rem;
+  ${fluidTypography(320, 1980, 16, 28)};
 `;
 
 const Date = styled(Base)``;
+const Time = styled(Base)``;
 const Name = styled(Base)``;
 const Address = styled(Base)``;
 
 const LocationSection = ({
-  data: { date, eventTimeRange, venueName, map, parkingBlurb },
+  data: { date, eventTimeRange, venueName, venueAddress, map, parkingBlurb },
 }) => {
   return (
     <SectionContainer>
       <SectionTitle title="Time + Place" />
       <Date>{date}</Date>
+      <Time>{eventTimeRange}</Time>
       {/*<a href={`https://${rsvpLink}`} target="_blank" rel="noopener noreferrer">*/}
       <Button text="RSVP" />
       {/*</a>*/}
       <Name>{venueName}</Name>
 
-      <Address>hh</Address>
+      <Address>{venueAddress}</Address>
       <div>{parkingBlurb}</div>
     </SectionContainer>
   );

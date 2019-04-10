@@ -5,6 +5,7 @@ import styled from "styled-components";
 import logo from "../img/logo.png";
 import Button from "./Button/Button";
 import mq from "../utils/mq";
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 const Logo = styled.img`
   width: 50px;
@@ -28,7 +29,7 @@ const MobileContainer = styled.div`
   align-items: center;
 
   button {
-    margin-right: 10px;
+    //margin-right: 10px;
   }
 
   ${mq.a768} {
@@ -45,40 +46,12 @@ const DesktopContainer = styled.div`
 `;
 
 const MenuContainer = styled.div`
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- visibility: visible;
- overflow: hidden;
- display: flex;
- align-items: center;
- justify-content: center;
- 
- > div{
-  background: rgba(24, 39, 51 , 0.85);
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
- }
- 
- > div > div{
- text-align: center;
-  max-width: 90vw;
-  max-height: 100vh;
-  opacity: 0;
-  transition: opacity 0.4s ease;
- }
+  display: ${props => (props.open ? `flex` : `none`)};
+  justify-content: flex-end;
 
-
-  // display: ${props => (props.open ? `flex` : `none`)};
+  a {
+    color: black;
+  }
 `;
 
 class Navbar extends React.Component {
@@ -104,41 +77,38 @@ class Navbar extends React.Component {
             <Logo src={logo} />
           </Link>
           <MobileContainer>
-            <Button text="Become a member" />
-            <HamburgerMenu
-              isOpen={mobileIsOpen}
-              color="#fff"
-              menuClicked={this.handleMenuClick}
-              width={40}
-              height={26}
-              strokeWidth={3}
-            />
+            {/*<Button text="Become a member" />*/}
+            {/*<HamburgerMenu*/}
+            {/*isOpen={mobileIsOpen}*/}
+            {/*color="#fff"*/}
+            {/*menuClicked={this.handleMenuClick}*/}
+            {/*width={40}*/}
+            {/*height={26}*/}
+            {/*strokeWidth={3}*/}
+            {/*/>*/}
+            <BurgerMenu />
           </MobileContainer>
           <DesktopContainer>
             <div>he</div>
             <div>he</div>
           </DesktopContainer>
         </NavContainer>
-        <MenuContainer open={mobileIsOpen}>
-          <div>
-            <div>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/sponsorship">Sponsorship</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </MenuContainer>
+        {/*<MenuContainer open={mobileIsOpen}>*/}
+        {/*<ul>*/}
+        {/*<li>*/}
+        {/*<Link to="/">Home</Link>*/}
+        {/*</li>*/}
+        {/*<li>*/}
+        {/*<Link to="/about">About</Link>*/}
+        {/*</li>*/}
+        {/*<li>*/}
+        {/*<Link to="/sponsorship">Sponsorship</Link>*/}
+        {/*</li>*/}
+        {/*<li>*/}
+        {/*<Link to="/contact">Contact</Link>*/}
+        {/*</li>*/}
+        {/*</ul>*/}
+        {/*</MenuContainer>*/}
       </>
     );
   }

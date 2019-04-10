@@ -10,5 +10,9 @@ heroSection:
 sponsorsSection:
   - logo: /img/apple-touch-icon.png
     sponsor: test
+    website: google.com
+  - logo: /img/products-grid2.jpg
+    sponsor: coffee
+    website: coffee.com
 ---
 

@@ -61,6 +61,10 @@ panelistSection:
       image: /img/img_20190225_110811.jpg
       name: Bodrick
       position: 'Co-Founder, Director of My House'
+    - biography: He is a crentista
+      image: /img/2019-04-11.png
+      name: 'Danilo '
+      position: Crentist
 locationSection:
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'

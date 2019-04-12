@@ -54,12 +54,12 @@ const PastEventsSection = () => (
       query PastEventsPost {
         allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
             node {
               frontmatter {
                 title
-                templateKey
                 googleDriveLink
                 image {
                   childImageSharp {
@@ -82,6 +82,7 @@ const PastEventsSection = () => (
           <EventsContainer>
             {events.map(i => {
               const { title, image } = i.node.frontmatter;
+              console.log(title);
               return (
                 <ItemContainer>
                   <Img

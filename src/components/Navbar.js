@@ -5,7 +5,7 @@ import styled from "styled-components";
 import logo from "../img/logo.png";
 import Button from "./Button/Button";
 import mq from "../utils/mq";
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
+// import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 const Logo = styled.img`
   width: 50px;
@@ -77,38 +77,38 @@ class Navbar extends React.Component {
             <Logo src={logo} />
           </Link>
           <MobileContainer>
-            {/*<Button text="Become a member" />*/}
-            {/*<HamburgerMenu*/}
-            {/*isOpen={mobileIsOpen}*/}
-            {/*color="#fff"*/}
-            {/*menuClicked={this.handleMenuClick}*/}
-            {/*width={40}*/}
-            {/*height={26}*/}
-            {/*strokeWidth={3}*/}
-            {/*/>*/}
-            <BurgerMenu />
+            <Button text="Become a member" />
+            <HamburgerMenu
+              isOpen={mobileIsOpen}
+              color="#fff"
+              menuClicked={this.handleMenuClick}
+              width={40}
+              height={26}
+              strokeWidth={3}
+            />
+            {/*<BurgerMenu />*/}
           </MobileContainer>
           <DesktopContainer>
             <div>he</div>
             <div>he</div>
           </DesktopContainer>
         </NavContainer>
-        {/*<MenuContainer open={mobileIsOpen}>*/}
-        {/*<ul>*/}
-        {/*<li>*/}
-        {/*<Link to="/">Home</Link>*/}
-        {/*</li>*/}
-        {/*<li>*/}
-        {/*<Link to="/about">About</Link>*/}
-        {/*</li>*/}
-        {/*<li>*/}
-        {/*<Link to="/sponsorship">Sponsorship</Link>*/}
-        {/*</li>*/}
-        {/*<li>*/}
-        {/*<Link to="/contact">Contact</Link>*/}
-        {/*</li>*/}
-        {/*</ul>*/}
-        {/*</MenuContainer>*/}
+        <MenuContainer open={mobileIsOpen}>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/sponsorship">Sponsorship</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </MenuContainer>
       </>
     );
   }

@@ -4,6 +4,7 @@ import SectionContainer from "../../components/SectionContainer/SectionContainer
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Button from "../../components/Button/Button";
 import fluidTypography from "../../utils/fluidTypography";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 const Base = styled.div`
   margin-bottom: 0.5rem;
@@ -16,7 +17,7 @@ const Name = styled(Base)``;
 const Address = styled(Base)``;
 
 const LocationSection = ({
-  data: { date, eventTimeRange, venueName, venueAddress, map, parkingBlurb },
+  data: { date, eventTimeRange, venueName, venueAddress, parkingBlurb },
 }) => {
   return (
     <SectionContainer>
@@ -29,6 +30,7 @@ const LocationSection = ({
       <Name>{venueName}</Name>
 
       <Address>{venueAddress}</Address>
+      <GoogleMap />
       <div>{parkingBlurb}</div>
     </SectionContainer>
   );

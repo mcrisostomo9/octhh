@@ -15,10 +15,20 @@ const ItemContainer = styled.div`
   position: relative;
   margin-bottom: 1rem;
   flex-basis: 100%;
+  cursor: pointer;
+
+  :hover {
+    filter: opacity(90%);
+  }
 
   ${mq.a768} {
     flex-basis: 45%;
     margin-bottom: 3rem;
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -81,15 +91,20 @@ const PastEventsSection = () => (
           <SectionTitle title="Past Events" />
           <EventsContainer>
             {events.map(i => {
-              const { title, image } = i.node.frontmatter;
-              console.log(title);
+              const { title, image, googleDriveLink } = i.node.frontmatter;
               return (
                 <ItemContainer>
-                  <Img
-                    fluid={image.childImageSharp.fluid}
-                    style={{ height: "100%" }}
-                  />
-                  <Title>{title}</Title>
+                  <a
+                    href={googleDriveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Img
+                      fluid={image.childImageSharp.fluid}
+                      style={{ height: "100%" }}
+                    />
+                    <Title>{title}</Title>
+                  </a>
                 </ItemContainer>
               );
             })}

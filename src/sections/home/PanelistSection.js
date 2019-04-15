@@ -46,7 +46,9 @@ const Position = styled(Base)`
   margin-bottom: 1.75rem;
 `;
 
-const Bio = styled.p``;
+const Bio = styled.p`
+  white-space: pre-line;
+`;
 
 const PanelistSection = ({ data: { panelistItems } }) => {
   return (

@@ -122,7 +122,10 @@ export const pageQuery = graphql`
           rsvpLink
           venueName
           venueAddress
-          map
+          coordinates {
+            latitude
+            longitude
+          }
           parkingBlurb
         }
 

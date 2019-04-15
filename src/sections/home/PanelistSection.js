@@ -54,8 +54,8 @@ const PanelistSection = ({ data: { panelistItems } }) => {
   return (
     <SectionContainer>
       <SectionTitle title="Panelists" />
-      {panelistItems.map(i => (
-        <PanelistContainer>
+      {panelistItems.map((i, index) => (
+        <PanelistContainer key={index}>
           <Img fluid={i.image.childImageSharp.fluid} />
           <TextContainer>
             <Name>{i.name}</Name>

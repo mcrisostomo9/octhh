@@ -90,10 +90,10 @@ const PastEventsSection = () => (
         <StyledSectionContainer>
           <SectionTitle title="Past Events" />
           <EventsContainer>
-            {events.map(i => {
+            {events.map((i, index) => {
               const { title, image, googleDriveLink } = i.node.frontmatter;
               return (
-                <ItemContainer>
+                <ItemContainer key={index}>
                   <a
                     href={googleDriveLink}
                     target="_blank"

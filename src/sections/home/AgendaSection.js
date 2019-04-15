@@ -49,14 +49,7 @@ const ItemDescription = styled(ItemTitle)`
   font-weight: normal;
 `;
 
-const AgendaContainer = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  //
-  // ${mq.a992} {
-  //   flex-direction: row;
-  // }
-`;
+const AgendaContainer = styled.div``;
 
 const AgendaSection = ({ data: { agendaItems } }) => {
   return (
@@ -66,7 +59,7 @@ const AgendaSection = ({ data: { agendaItems } }) => {
         {agendaItems.map((agenda, index) => {
           const firstItem = index === 0;
           return (
-            <ItemContainer firstItem={firstItem}>
+            <ItemContainer firstItem={firstItem} key={index}>
               <Time>{agenda.timeRange}</Time>
               <ItemTitle>{agenda.title}</ItemTitle>
               <ItemDescription>{agenda.agendaDescription}</ItemDescription>

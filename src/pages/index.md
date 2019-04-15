@@ -67,8 +67,8 @@ panelistSection:
       position: Crentist
 locationSection:
   coordinates:
-    latitude: '33.7478'
-    longitude: '-117.8657'
+    latitude: '33.6993'
+    longitude: '-117.8466'
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'
   parkingBlurb: plz park around the corner

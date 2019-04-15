@@ -1,31 +1,53 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import logo from "../../img/logo.png";
+import styled from "styled-components";
+import mq from "../../utils/mq";
 
-// interface IProps {}
+const Marker = styled.img`
+  height: 30px;
+  width: auto;
+`;
 
-// interface IState {}
+const Container = styled.div`
+  height: 300px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+  ${mq.a1200} {
+    height: 400px;
+  }
+
+  ${mq.a1400} {
+    height: 450px;
+  }
+
+  ${mq.a1600} {
+    height: 500px;
+  }
+`;
+
+const AnyReactComponent = ({ text }) => (
+  <div>
+    <Marker src={logo} />
+  </div>
+);
 
 class GoogleMap extends React.Component {
-  static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33,
-    },
-    zoom: 11,
-  };
   render() {
+    const { latitude, longitude } = this.props.coordinates;
+    const cd = { lat: parseFloat(latitude), lng: parseFloat(longitude) };
     return (
-      <div style={{ height: "500px", width: "800px" }}>
+      <Container>
         <GoogleMapReact
           bootstrapURLKeys={{ key: `AIzaSyA4ZytJbBo5FEQILV8-DD4uPW7Iyga6U_8` }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          defaultCenter={cd}
+          defaultZoom={17}
         >
-          <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
+          <AnyReactComponent lat={cd.lat} lng={cd.lng} text="My Marker" />
         </GoogleMapReact>
-      </div>
+      </Container>
     );
   }
 }

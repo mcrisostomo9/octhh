@@ -17,7 +17,14 @@ const Name = styled(Base)``;
 const Address = styled(Base)``;
 
 const LocationSection = ({
-  data: { date, eventTimeRange, venueName, venueAddress, parkingBlurb },
+  data: {
+    date,
+    eventTimeRange,
+    venueName,
+    venueAddress,
+    coordinates,
+    parkingBlurb,
+  },
 }) => {
   return (
     <SectionContainer>
@@ -30,7 +37,7 @@ const LocationSection = ({
       <Name>{venueName}</Name>
 
       <Address>{venueAddress}</Address>
-      <GoogleMap />
+      <GoogleMap coordinates={coordinates} />
       <div>{parkingBlurb}</div>
     </SectionContainer>
   );

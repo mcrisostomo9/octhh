@@ -4,7 +4,7 @@ import logo from "../../img/logo.png";
 import styled from "styled-components";
 import mq from "../../utils/mq";
 
-const Marker = styled.img`
+const Logo = styled.img`
   height: 30px;
   width: auto;
 `;
@@ -28,11 +28,7 @@ const Container = styled.div`
   }
 `;
 
-const AnyReactComponent = ({ text }) => (
-  <div>
-    <Marker src={logo} />
-  </div>
-);
+const Marker = () => <Logo src={logo} />;
 
 class GoogleMap extends React.Component {
   render() {
@@ -45,7 +41,7 @@ class GoogleMap extends React.Component {
           defaultCenter={cd}
           defaultZoom={17}
         >
-          <AnyReactComponent lat={cd.lat} lng={cd.lng} text="My Marker" />
+          <Marker lat={cd.lat} lng={cd.lng} text="My Marker" />
         </GoogleMapReact>
       </Container>
     );

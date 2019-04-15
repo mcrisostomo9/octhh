@@ -66,12 +66,14 @@ panelistSection:
       name: 'Danilo '
       position: Crentist
 locationSection:
+  coordinates:
+    latitude: '33.7478'
+    longitude: '-117.8657'
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'
-  map: '{"type":"Point","coordinates":[-104.1725361,38.9108405]}'
   parkingBlurb: plz park around the corner
   rsvpLink: octhh.org
-  venueAddress: 11458 178th street
-  venueName: Eureka Building
+  venueAddress: '220 E 4th St #102, Santa Ana, CA 92701'
+  venueName: The Playground
 ---
 

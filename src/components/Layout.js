@@ -1,9 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-
-import "./all.sass";
 import "./layout.css";
+import "./all.sass";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 

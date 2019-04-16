@@ -15,6 +15,14 @@ const Date = styled(Base)``;
 const Time = styled(Base)``;
 const Name = styled(Base)``;
 const Address = styled(Base)``;
+const StyledButton = styled(Button)`
+  margin: 1rem 0 1.5rem;
+`;
+
+const ParkingBlurb = styled.p`
+  white-space: pre-line;
+  margin: 2rem 0;
+`;
 
 const LocationSection = ({
   data: {
@@ -32,13 +40,13 @@ const LocationSection = ({
       <Date>{date}</Date>
       <Time>{eventTimeRange}</Time>
       {/*<a href={`https://${rsvpLink}`} target="_blank" rel="noopener noreferrer">*/}
-      <Button text="RSVP" />
+      <StyledButton text="RSVP" />
       {/*</a>*/}
       <Name>{venueName}</Name>
 
       <Address>{venueAddress}</Address>
       <GoogleMap coordinates={coordinates} />
-      <div>{parkingBlurb}</div>
+      {parkingBlurb && <ParkingBlurb>{parkingBlurb}</ParkingBlurb>}
     </SectionContainer>
   );
 };

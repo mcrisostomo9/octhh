@@ -13,7 +13,7 @@ const Container = styled.div`
   height: 300px;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   ${mq.a1200} {
     height: 400px;

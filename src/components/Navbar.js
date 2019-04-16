@@ -77,7 +77,7 @@ class Navbar extends React.Component {
             <Logo src={logo} />
           </Link>
           <MobileContainer>
-            <Button text="Become a member" />
+            {/*<Button text="Become a member" />*/}
             <HamburgerMenu
               isOpen={mobileIsOpen}
               color="#fff"

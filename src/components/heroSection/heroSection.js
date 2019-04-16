@@ -30,7 +30,7 @@ const TextContainer = styled.div`
   text-align: center;
   padding: 0 32px;
   width: 100%;
-  max-width: var(--max-width-desktop);
+  max-width: 950px;
   margin: 0 auto;
 
   * {

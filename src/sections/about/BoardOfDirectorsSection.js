@@ -9,12 +9,12 @@ const StyledSectionContainer = styled(SectionContainer)`
 `;
 
 const BoardContainer = styled.ul`
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  max-width: var(--max-width-desktop);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem 2rem;
   justify-items: center;
-  text-align: left;
 
   ${mq.a768} {
     grid-template-columns: repeat(3, 1fr);
@@ -22,13 +22,14 @@ const BoardContainer = styled.ul`
 
   ${mq.a1200} {
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
   }
 `;
 
 const Individual = styled.li`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  //align-items: start;
   width: 100%;
 `;
 

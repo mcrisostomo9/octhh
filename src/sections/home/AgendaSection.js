@@ -16,7 +16,7 @@ const ItemContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--max-width-desktop);
   margin: 0 auto 1rem;
   ${mq.a992} {
     grid-template-columns: 1fr 1fr 2fr;

@@ -7,6 +7,11 @@ const Logo = styled.img`
   //width: 50px;
 `;
 
+const Container = styled.div`
+  //margin: 0 auto;
+  //max-width: var(--max-width-desktop);
+`;
+
 const Navbar = class extends React.Component {
   componentDidMount() {
     // Get all "navbar-burger" elements
@@ -33,36 +38,43 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav className="navbar" role="navigation" aria-label="main-navigation">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <Logo
-              src={logo}
-              alt="OC Tech Happy Hour"
-              width="50"
-              height="auto"
-            />
-          </Link>
-          <div className="navbar-burger burger" data-target="navMenu">
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
+      <nav
+        id="navbar"
+        className="navbar"
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <Container className="container">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item" title="Logo">
+              <Logo
+                src={logo}
+                alt="OC Tech Happy Hour"
+                width="50"
+                height="auto"
+              />
+            </Link>
+            <div className="navbar-burger burger" data-target="navMenu">
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </div>
           </div>
-        </div>
 
-        <div id="navMenu" className="navbar-menu">
-          <div className="navbar-end">
-            <Link to="/about" className="navbar-item">
-              About
-            </Link>
-            <Link to="/sponsorship" className="navbar-item">
-              Sponsorship
-            </Link>
-            <Link to="/contact" className="navbar-item">
-              Contact
-            </Link>
+          <div id="navMenu" className="navbar-menu">
+            <div className="navbar-end">
+              <Link to="/about" className="navbar-item">
+                About
+              </Link>
+              <Link to="/sponsorship" className="navbar-item">
+                Sponsorship
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Contact
+              </Link>
+            </div>
           </div>
-        </div>
+        </Container>
       </nav>
     );
   }

@@ -71,7 +71,7 @@ locationSection:
     longitude: '-117.8657'
   date: Mar 19th 19
   eventTimeRange: '7:00pm - 9pm'
-  parkingBlurb: plz park around the corner
+  parkingBlurb: ''
   rsvpLink: octhh.org
   venueAddress: '220 E 4th St #102, Santa Ana, CA 92701'
   venueName: The Playground

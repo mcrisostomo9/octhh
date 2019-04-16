@@ -40,30 +40,35 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav className="navbar" role="navigation" aria-label="main-navigation">
-        <Container className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <Logo
-                src={logo}
-                alt="OC Tech Happy Hour"
-                width="50"
-                height="auto"
-              />
-            </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
-            </div>
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item" title="Logo">
+            <Logo
+              src={logo}
+              alt="OC Tech Happy Hour"
+              width="50"
+              height="auto"
+            />
+          </Link>
+          <div className="navbar-burger burger" data-target="navMenu">
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </div>
+        </div>
 
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-end">
-              <Button className="navbar-item" text="Become a Member" />
-            </div>
+        <div id="navMenu" className="navbar-menu">
+          <div className="navbar-end">
+            <Link to="/about" className="navbar-item">
+              About
+            </Link>
+            <Link to="/sponsorship" className="navbar-item">
+              Sponsorship
+            </Link>
+            <Link to="/contact" className="navbar-item">
+              Contact
+            </Link>
           </div>
-        </Container>
+        </div>
       </nav>
     );
   }

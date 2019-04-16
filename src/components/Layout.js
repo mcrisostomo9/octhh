@@ -3,8 +3,8 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import "./layout.css";
 import "./all.sass";
-import Footer from "./Footer";
 import BulmaNavbar from "./BulmaNavbar";
+import BulmaFooter from "./BulmaFooter";
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -61,7 +61,8 @@ const TemplateWrapper = ({ children }) => (
         {/*<Navbar />*/}
         <BulmaNavbar />
         <main>{children}</main>
-        <Footer />
+        {/*<Footer />*/}
+        <BulmaFooter />
       </>
     )}
   />

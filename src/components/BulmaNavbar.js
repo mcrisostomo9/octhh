@@ -2,15 +2,29 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import logo from "../img/logo.png";
+import mq from "../utils/mq";
+
+const Nav = styled.nav`
+  background-color: #646464 !important;
+
+  @media (min-width: 1088px) {
+    background-color: transparent !important;
+    padding-top: 1rem;
+    position: absolute !important;
+    width: 100%;
+  }
+`;
 
 const Logo = styled.img`
-  //width: 50px;
+  width: 50px;
+  height: auto;
+
+  ${mq.a1200} {
+    width: 80px;
+  }
 `;
 
-const Container = styled.div`
-  //margin: 0 auto;
-  //max-width: var(--max-width-desktop);
-`;
+const Container = styled.div``;
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -38,21 +52,16 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
+      <Nav
         id="navbar"
-        className="navbar"
+        className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
         <Container className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <Logo
-                src={logo}
-                alt="OC Tech Happy Hour"
-                width="50"
-                height="auto"
-              />
+              <Logo src={logo} alt="OC Tech Happy Hour" />
             </Link>
             <div className="navbar-burger burger" data-target="navMenu">
               <span aria-hidden="true" />
@@ -75,7 +84,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </Container>
-      </nav>
+      </Nav>
     );
   }
 };

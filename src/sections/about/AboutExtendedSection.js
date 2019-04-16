@@ -1,16 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
+import mq from "../../utils/mq";
+
+const StyledSectionContainer = styled(SectionContainer)`
+  ${mq.a992} {
+    padding: 60px 40px;
+  }
+
+  ${mq.a1200} {
+    padding: 75px 40px;
+  }
+`;
 
 const Text = styled.p`
   white-space: pre-line;
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
 `;
 
 const AboutExtendedSection = ({ text }) => {
   return (
-    <SectionContainer>
+    <StyledSectionContainer>
       <Text>{text}</Text>
-    </SectionContainer>
+    </StyledSectionContainer>
   );
 };
 

@@ -15,7 +15,7 @@ nextEventSection:
   rsvpLink: octhh.org
   title: 'Fireside Chat: Women in Tech + Networking!'
 agendaSection:
-  active: true
+  active: false
   agendaItems:
     - agendaDescription: Networking etc
       timeRange: '6:00-6:30'
@@ -27,7 +27,7 @@ agendaSection:
       timeRange: '7:30-8:00'
       title: Networking + Closing
 panelistSection:
-  active: true
+  active: false
   panelistItems:
     - biography: >-
         He founded woof

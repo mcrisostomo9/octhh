@@ -27,7 +27,7 @@ agendaSection:
       timeRange: '7:30-8:00'
       title: Networking + Closing
 panelistSection:
-  active: true
+  active: false
   panelistItems:
     - biography: >-
         He founded woof

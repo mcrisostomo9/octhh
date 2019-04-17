@@ -15,7 +15,7 @@ nextEventSection:
   rsvpLink: octhh.org
   title: 'Fireside Chat: Women in Tech + Networking!'
 agendaSection:
-  active: true
+  active: false
   agendaItems:
     - agendaDescription: Networking etc
       timeRange: '6:00-6:30'

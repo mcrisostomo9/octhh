@@ -15,8 +15,12 @@ const StyledSectionContainer = styled(SectionContainer)`
 
 const Text = styled.p`
   white-space: pre-line;
-  max-width: var(--max-width-desktop);
+  max-width: var(--max-width-laptop);
   margin: 0 auto;
+
+  ${mq.a1400} {
+    max-width: var(--max-width-desktop);
+  }
 `;
 
 const AboutExtendedSection = ({ text }) => {

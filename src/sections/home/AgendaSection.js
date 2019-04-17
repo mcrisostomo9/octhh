@@ -16,7 +16,8 @@ const ItemContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: var(--max-width-desktop);
+  max-width: var(--max-width-laptop);
+
   margin: 0 auto 1rem;
   ${mq.a992} {
     grid-template-columns: 1fr 1fr 2fr;
@@ -27,6 +28,10 @@ const ItemContainer = styled.div`
     padding: 2rem 0;
     grid-column-gap: 1rem;
     margin-bottom: 0;
+  }
+
+  ${mq.a1400} {
+    max-width: var(--max-width-desktop);
   }
 `;
 

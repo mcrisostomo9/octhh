@@ -12,7 +12,7 @@ const Logo = styled.img`
 const Container = styled.div`
   height: 300px;
   width: 100%;
-  max-width: var(--max-width-desktop);
+  max-width: var(--max-width-laptop);
   margin: 1rem auto;
 
   ${mq.a1200} {
@@ -21,6 +21,7 @@ const Container = styled.div`
 
   ${mq.a1400} {
     height: 450px;
+    max-width: var(--max-width-desktop);
   }
 
   ${mq.a1600} {

@@ -10,7 +10,7 @@ const StyledSectionContainer = styled(SectionContainer)`
 
 const BoardContainer = styled.ul`
   margin: 3rem auto 0;
-  max-width: var(--max-width-desktop);
+  max-width: var(--max-width-laptop);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem 2rem;
@@ -23,6 +23,10 @@ const BoardContainer = styled.ul`
   ${mq.a1200} {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
+  }
+
+  ${mq.a1400} {
+    max-width: var(--max-width-desktop);
   }
 `;
 

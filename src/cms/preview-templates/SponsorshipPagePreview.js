@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ContactPageTemplate } from "../../templates/sponsorship-page";
+import { SponsorshipPageTemplate } from "../../templates/sponsorship-page";
 
 const SponsorshipPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(["data", "intro", "blurbs"]);
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
   return (
-    <ContactPageTemplate
+    <SponsorshipPageTemplate
       image={entry.getIn(["data", "image"])}
       title={entry.getIn(["data", "title"])}
       heading={entry.getIn(["data", "heading"])}

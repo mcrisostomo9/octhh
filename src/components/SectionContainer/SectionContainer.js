@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import mq from "../../utils/mq";
 
-const Container = styled.div`
+const Container = styled.section`
   padding: 30px 40px;
   text-align: center;
 

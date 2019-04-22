@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroSection from "../components/heroSection/heroSection";
-import SponsorsSection from "../sections/sponsorship/SponsorsSection";
 import ContactForm from "../components/ContactForm/ContactForm";
 
 export const ContactPageTemplate = ({ heroSection }) => (
   <>
-    {/*<HeroSection data={heroSection} />*/}
+    <HeroSection data={heroSection} />
     <ContactForm />
   </>
 );

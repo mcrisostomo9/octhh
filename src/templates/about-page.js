@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/heroSection/heroSection";
 import AboutExtendedSection from "../sections/about/AboutExtendedSection";
 import BoardOfDirectorsSection from "../sections/about/BoardOfDirectorsSection";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 export const AboutPageTemplate = ({
   heroSection,
@@ -15,6 +16,7 @@ export const AboutPageTemplate = ({
     <HeroSection data={heroSection} />
     <AboutExtendedSection text={aboutSectionExtended} />
     <BoardOfDirectorsSection board={boardOfDirectorsSection} />
+    <ContactForm />
   </>
 );
 

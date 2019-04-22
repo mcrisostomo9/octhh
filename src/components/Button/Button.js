@@ -4,9 +4,9 @@ import fluidTypography from "../../utils/fluidTypography";
 import mq from "../../utils/mq";
 
 const BaseButton = props => {
-  const { onClick, text, className } = props;
+  const { onClick, text, className, type } = props;
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} type={type}>
       {text}
     </button>
   );

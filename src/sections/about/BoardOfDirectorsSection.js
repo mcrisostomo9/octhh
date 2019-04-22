@@ -6,6 +6,14 @@ import mq from "../../utils/mq";
 
 const StyledSectionContainer = styled(SectionContainer)`
   background-color: var(--dark-blue);
+
+  ${mq.a992} {
+    padding: 60px 40px;
+  }
+
+  ${mq.a1200} {
+    padding: 75px 40px;
+  }
 `;
 
 const BoardContainer = styled.ul`

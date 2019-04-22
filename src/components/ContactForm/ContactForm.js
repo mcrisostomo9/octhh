@@ -1,5 +1,4 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 import styled from "styled-components";
 import SectionContainer from "../SectionContainer/SectionContainer";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -27,6 +26,10 @@ const Form = styled.form`
 
 const Field = styled.div``;
 
+const SuccessMessage = styled.p`
+  color: green;
+`;
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -36,7 +39,7 @@ function encode(data) {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { isValidated: false, success: false };
   }
 
   handleChange = e => {
@@ -54,7 +57,7 @@ export default class ContactForm extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => this.setState({ success: true }))
       .catch(error => alert(error));
   };
 
@@ -65,7 +68,6 @@ export default class ContactForm extends React.Component {
         <Form
           name="contact"
           method="post"
-          action="/contact/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
@@ -116,9 +118,16 @@ export default class ContactForm extends React.Component {
               />
             </div>
           </Field>
-          <Field className="field submitBtn">
-            <Button type="submit" text="submit" />
-          </Field>
+          {this.state.success ? (
+            <SuccessMessage>
+              Your submission has been received. Someone will be in contact with
+              you very soon!
+            </SuccessMessage>
+          ) : (
+            <Field className="field submitBtn">
+              <Button type="submit" text="submit" />
+            </Field>
+          )}
         </Form>
       </StyledSectionContainer>
     );

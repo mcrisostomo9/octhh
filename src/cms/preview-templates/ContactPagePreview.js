@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ContactPageTemplate } from "../../templates/sponsorship-page";
 
-const SponsorshipPagePreview = ({ entry, getAsset }) => {
+const ContactPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(["data", "intro", "blurbs"]);
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
@@ -34,11 +34,11 @@ const SponsorshipPagePreview = ({ entry, getAsset }) => {
   );
 };
 
-SponsorshipPagePreview.propTypes = {
+ContactPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };
 
-export default SponsorshipPagePreview;
+export default ContactPagePreview;

@@ -26,6 +26,10 @@ const Form = styled.form`
 
 const Field = styled.div``;
 
+const Label = styled.label`
+  text-align: left;
+`;
+
 const SuccessMessage = styled.p`
   color: green;
 `;
@@ -81,9 +85,11 @@ export default class SponsorFormSection extends React.Component {
             </label>
           </div>
           <Field className="field">
+            <Label className="label" htmlFor={"name"}>
+              Name
+            </Label>
             <div className="control">
               <input
-                placeholder="NAME"
                 className="input"
                 type={"text"}
                 name={"name"}
@@ -94,9 +100,11 @@ export default class SponsorFormSection extends React.Component {
             </div>
           </Field>
           <Field className="field">
+            <Label className="label" htmlFor={"name"}>
+              Email
+            </Label>
             <div className="control">
               <input
-                placeholder="EMAIL"
                 className="input"
                 type={"email"}
                 name={"email"}
@@ -107,9 +115,11 @@ export default class SponsorFormSection extends React.Component {
             </div>
           </Field>
           <Field className="field">
+            <Label className="label" htmlFor={"company"}>
+              Company
+            </Label>
             <div className="control">
               <input
-                placeholder="COMPANY"
                 className="input"
                 type={"text"}
                 name={"company"}
@@ -120,9 +130,11 @@ export default class SponsorFormSection extends React.Component {
             </div>
           </Field>
           <Field className="field">
+            <Label className="label" htmlFor={"number"}>
+              Phone Number
+            </Label>
             <div className="control">
               <input
-                placeholder="PHONE NUMBER"
                 className="input"
                 type={"number"}
                 name={"phone"}
@@ -133,9 +145,11 @@ export default class SponsorFormSection extends React.Component {
             </div>
           </Field>
           <Field className="field">
+            <Label className="label" htmlFor={"message"}>
+              Message
+            </Label>
             <div className="control">
               <textarea
-                placeholder="MESSAGE"
                 className="textarea"
                 name={"message"}
                 onChange={this.handleChange}

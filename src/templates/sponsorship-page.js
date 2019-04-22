@@ -4,11 +4,13 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroSection from "../components/heroSection/heroSection";
 import SponsorsSection from "../sections/sponsorship/SponsorsSection";
+import SponsorFormSection from "../sections/sponsorship/SponsorFormSection";
 
 export const SponsorshipPageTemplate = ({ heroSection, sponsorsSection }) => (
   <>
     <HeroSection data={heroSection} />
     <SponsorsSection sponsors={sponsorsSection} />
+    <SponsorFormSection />
   </>
 );
 

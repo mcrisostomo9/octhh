@@ -8,7 +8,7 @@ import ContactForm from "../components/ContactForm/ContactForm";
 
 export const ContactPageTemplate = ({ heroSection }) => (
   <>
-    <HeroSection data={heroSection} />
+    {/*<HeroSection data={heroSection} />*/}
     <ContactForm />
   </>
 );

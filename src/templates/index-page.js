@@ -27,15 +27,11 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  heroSection: PropTypes.object.isRequired,
+  nextEventSection: PropTypes.object.isRequired,
+  agendaSection: PropTypes.object.isRequired,
+  panelistSection: PropTypes.object.isRequired,
+  locationSection: PropTypes.object.isRequired,
 };
 
 const IndexPage = ({ data }) => {

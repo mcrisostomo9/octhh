@@ -22,8 +22,8 @@ export const AboutPageTemplate = ({
 
 AboutPageTemplate.propTypes = {
   heroSection: PropTypes.object.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  aboutSectionExtended: PropTypes.object.isRequired,
+  boardOfDirectorsSection: PropTypes.object.isRequired,
 };
 
 const AboutPage = ({ data }) => {

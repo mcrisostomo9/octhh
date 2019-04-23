@@ -155,6 +155,7 @@ export default class SponsorFormSection extends React.Component {
                 onChange={this.handleChange}
                 id={"message"}
                 required={true}
+                rows="8"
               />
             </div>
           </Field>

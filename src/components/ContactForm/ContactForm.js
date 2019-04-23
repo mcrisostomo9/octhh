@@ -125,6 +125,7 @@ export default class ContactForm extends React.Component {
                 onChange={this.handleChange}
                 id={"message"}
                 required={true}
+                rows="8"
               />
             </div>
           </Field>

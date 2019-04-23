@@ -24,15 +24,16 @@ const Name = styled(Base)``;
 const Address = styled(Base)``;
 
 const StyledLink = styled.a`
-  margin-top: 20px;
   display: block;
+  max-width: 150px;
+  margin: 20px auto 0;
+
+  ${mq.a992} {
+    max-width: 230px;
+  }
 
   ${mq.a1200} {
     margin-top: 40px;
-  }
-
-  ${mq.a1400} {
-    margin-top: 60px;
   }
 `;
 

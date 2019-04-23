@@ -55,7 +55,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/octhh_web_home.jpg" />
+          <meta property="og:image" content="/img/octhh_web_home.png" />
         </Helmet>
         {/*<Navbar />*/}
         <BulmaNavbar />

@@ -6,6 +6,7 @@ import mq from "../utils/mq";
 
 const Nav = styled.nav`
   background-color: #646464 !important;
+  overflow-x: hidden;
 
   @media (min-width: 1088px) {
     background-color: transparent !important;

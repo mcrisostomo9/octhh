@@ -9,9 +9,9 @@ heroSection:
   heroImage: /img/octhh_web_home.png
   title: OC Tech Happy Hour
 nextEventSection:
-  date: Mar 21st 19
-  locationAddress: '1621 Alton Parkway, Irvine'
-  locationName: Eureka Building
+  date: May 21st 19
+  locationAddress: '19530 Jamboree Rd, Irvine, CA 92612'
+  locationName: Twenty Eight Restaurant and Bar
   rsvpLink: octhh.org
   title: 'Fireside Chat: Women in Tech + Networking!'
 agendaSection:
@@ -63,13 +63,13 @@ panelistSection:
       position: 'Co-Founder, Director of My House'
 locationSection:
   coordinates:
-    latitude: '33.7478'
-    longitude: '-117.8657'
-  date: Mar 19th 19
+    latitude: '33.659432'
+    longitude: '-117.860178'
+  date: May 21st 19
   eventTimeRange: '7:00pm - 9pm'
   parkingBlurb: ''
   rsvpLink: octhh.org
-  venueAddress: '220 E 4th St #102, Santa Ana, CA 92701'
-  venueName: The Playground
+  venueAddress: '19530 Jamboree Rd, Irvine, CA 92612'
+  venueName: Twenty Eight Restaurant and Bar
 ---
 

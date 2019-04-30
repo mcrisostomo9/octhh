@@ -1,10 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const EventPost = ({ data }) => {
-  const { markdownRemark: post } = data;
-
-  return <Layout>.</Layout>;
+const EventPost = () => {
+  return <Layout />;
 };
 
 export default EventPost;

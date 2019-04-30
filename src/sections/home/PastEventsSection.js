@@ -54,8 +54,11 @@ const EventsContainer = styled.div`
   ${mq.a768} {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
 `;
 
 const PastEventsSection = () => (

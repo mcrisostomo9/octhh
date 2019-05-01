@@ -7,14 +7,26 @@ import Description from "../Description/Description";
 
 const Container = styled.div`
   position: relative;
-  height: 400px;
+  height: 350px;
 
   ${mq.a375} {
-    height: 500px;
+    height: 380px;
   }
 
-  ${mq.a768} {
-    height: 100vh;
+  ${mq.a992} {
+    height: 570px;
+  }
+
+  ${mq.a1600} {
+    height: 700px;
+  }
+
+  ${mq.a1800} {
+    height: 800px;
+  }
+
+  ${mq.a2200} {
+    height: 1000px;
   }
 `;
 

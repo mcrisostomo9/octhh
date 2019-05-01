@@ -27,6 +27,13 @@ const Logo = styled.img`
 
 const Container = styled.div``;
 
+const ItemContainer = styled.div`
+  a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+`;
+
 const Navbar = class extends React.Component {
   componentDidMount() {
     // Get all "navbar-burger" elements
@@ -72,7 +79,7 @@ const Navbar = class extends React.Component {
           </div>
 
           <div id="navMenu" className="navbar-menu">
-            <div className="navbar-end">
+            <ItemContainer className="navbar-end">
               <Link to="/about" className="navbar-item">
                 About
               </Link>
@@ -82,7 +89,7 @@ const Navbar = class extends React.Component {
               <Link to="/contact" className="navbar-item">
                 Contact
               </Link>
-            </div>
+            </ItemContainer>
           </div>
         </Container>
       </Nav>

@@ -30,7 +30,6 @@ const BurgerContainer = styled.div`
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    right: 20px !important;
   }
 
   /* Color/shape of close button cross */

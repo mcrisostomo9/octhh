@@ -3,12 +3,8 @@ import styled from "styled-components";
 import mq from "../../utils/mq";
 
 const Container = styled.section`
-  padding: 30px 40px;
+  padding: 50px 40px;
   text-align: center;
-
-  ${mq.a768} {
-    padding: 40px;
-  }
 
   ${mq.a992} {
     padding: 60px 40px 20px;

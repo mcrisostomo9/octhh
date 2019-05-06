@@ -44,6 +44,10 @@ const Individual = styled.li`
   flex-direction: column;
   width: 100%;
   text-align: left;
+
+  ${mq.a992} {
+    text-align: center;
+  }
 `;
 
 const Name = styled.h3`

@@ -19,11 +19,11 @@ aboutSectionExtended: >-
   Nutrition, Information Technology, SaaS, and even Wine Making!
 boardOfDirectorsSection:
   - name: Hunter Lee Decker
-    position: 'Founder, Chairman'
+    position: Founder
   - name: Dalip Jaggi
     position: President
   - name: Brian Walsh
-    position: 'Vice President, Partnerships Chair'
+    position: Vice President
   - name: Kevin Guo
     position: Treasurer
   - name: Amrit Jaggi

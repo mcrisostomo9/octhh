@@ -4,38 +4,38 @@ import { Link } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
 
 const BurgerContainer = styled.div`
-  a {
-    //font-family: "Playfair Display", sans-serif !important;
-    //text-transform: uppercase;
+  @media (min-width: 1088px) {
+    display: none;
   }
+
   /* Position and sizing of burger button */
   .bm-burger-button {
     position: absolute;
     width: 36px;
     height: 30px;
-    right: 36px;
-    top: 20px;
+    right: 30px;
+    top: 22px;
   }
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
     background: #fff;
+    height: 3px !important;
   }
 
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #728071;
+    background: var(--dark-blue);
   }
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    height: 24px;
-    width: 24px;
+    right: 20px !important;
   }
 
   /* Color/shape of close button cross */
   .bm-cross {
-    background: #bdc3c7;
+    background: #fff;
   }
 
   /*
@@ -76,7 +76,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   a {
-    color: black;
+    color: #fff;
+    font-weight: bold;
     text-decoration: none;
     margin-bottom: 16px;
     outline: none;

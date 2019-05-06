@@ -3,8 +3,9 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import "./layout.css";
 import "./all.sass";
-import BulmaNavbar from "./BulmaNavbar";
 import BulmaFooter from "./BulmaFooter";
+import Navbar from "./Navbar";
+import BulmaNavbar from "./BulmaNavbar";
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -56,7 +57,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:image" content="/img/octhh_web_home.png" />
         </Helmet>
-        {/*<Navbar />*/}
+        <Navbar />
         <BulmaNavbar />
         <main>{children}</main>
         {/*<Footer />*/}

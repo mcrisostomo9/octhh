@@ -7,8 +7,10 @@ import mq from "../utils/mq";
 const Nav = styled.nav`
   background-color: #646464 !important;
   overflow-x: hidden;
+  display: none;
 
   @media (min-width: 1088px) {
+    display: block;
     background-color: transparent !important;
     padding-top: 1rem;
     position: absolute !important;
@@ -34,67 +36,36 @@ const ItemContainer = styled.div`
   }
 `;
 
-const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener("click", () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("is-active");
-          $target.classList.toggle("is-active");
-        });
-      });
-    }
-  }
-
-  render() {
-    return (
-      <Nav
-        id="navbar"
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <Container className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <Logo src={logo} alt="OC Tech Happy Hour" />
+function BulmaNavbar() {
+  return (
+    <Nav
+      id="navbar"
+      className="navbar is-transparent"
+      role="navigation"
+      aria-label="main-navigation"
+    >
+      <Container className="container">
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item" title="Logo">
+            <Logo src={logo} alt="OC Tech Happy Hour" />
+          </Link>
+        </div>
+        <div id="navMenu" className="navbar-menu">
+          <ItemContainer className="navbar-end">
+            <Link to="/about" className="navbar-item">
+              About
             </Link>
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-            </div>
-          </div>
+            <Link to="/sponsorship" className="navbar-item">
+              Sponsorship
+            </Link>
+            <Link to="/contact" className="navbar-item">
+              Contact
+            </Link>
+          </ItemContainer>
+        </div>
+      </Container>
+    </Nav>
+  );
+}
 
-          <div id="navMenu" className="navbar-menu">
-            <ItemContainer className="navbar-end">
-              <Link to="/about" className="navbar-item">
-                About
-              </Link>
-              <Link to="/sponsorship" className="navbar-item">
-                Sponsorship
-              </Link>
-              <Link to="/contact" className="navbar-item">
-                Contact
-              </Link>
-            </ItemContainer>
-          </div>
-        </Container>
-      </Nav>
-    );
-  }
-};
-
-export default Navbar;
+export default BulmaNavbar;

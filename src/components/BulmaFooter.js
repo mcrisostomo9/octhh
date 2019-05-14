@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = class extends React.Component {
   render() {
@@ -46,16 +48,20 @@ const Footer = class extends React.Component {
               </div>
               <div className="column is-4 social">
                 <a
+                  title="linkedin"
+                  href="https://www.linkedin.com/company/octhh-org/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a
                   rel="noopener noreferrer"
                   target="_blank"
                   title="instagram"
                   href="https://www.instagram.com/octhhsocial/"
                 >
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: "1em", height: "1em" }}
-                  />
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
                   title="facebook"
@@ -63,24 +69,7 @@ const Footer = class extends React.Component {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a
-                  title="twitter"
-                  href="https://twitter.com/octechhappyhour?lang=en"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: "1em", height: "1em" }}
-                  />
+                  <FontAwesomeIcon icon={faFacebook} />
                 </a>
               </div>
             </div>

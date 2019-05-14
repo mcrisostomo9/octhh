@@ -8,7 +8,8 @@ import bg from "../../img/pe_bg.png";
 import mq from "../../utils/mq";
 
 const StyledSectionContainer = styled(SectionContainer)`
-  background: url(${bg});
+  background: url(${bg}) no-repeat;
+  background-size: cover;
 `;
 
 const ItemContainer = styled.div`
